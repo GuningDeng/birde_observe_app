@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th='http://www.thymeleaf.org'>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type='text/javascript' src='/js/app.js'></script>
+
+    <title th:text="${title}"></title>
+</head>
+
+<body>
+    <div class="container-md py-4" style="max-width: 520px;">
+        <h1 th:text="${title}"></h1>
+        <br/><br/>
+        <p th:text="${msg}"></p>
+        <p th:each="role:${user.roles}" th:text="${user.username} +' ' + ${role.name}"></p>
+        		
+    </div>
+</body>
+</html>
+
